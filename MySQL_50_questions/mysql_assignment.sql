@@ -1,5 +1,4 @@
 
--- MySQL Basics – Assignment (1–25)
 
 CREATE DATABASE college_db;
 USE college_db;
@@ -51,7 +50,7 @@ SELECT name AS student_name FROM student_info;
 SELECT * FROM student_info WHERE department != 'Mechanical';
 DELETE FROM student_info;
 
--- MySQL Advanced – Assignment (26–50)
+
 
 CREATE TABLE marks (
     student_id INT,
@@ -183,18 +182,7 @@ FROM student_info
 GROUP BY name
 HAVING count > 1;
 
--- Backup:
--- mysqldump -u root -p college_db > college_db_backup.sql
 
--- Restore:
--- mysql -u root -p college_db < college_db_backup.sql
-
--- Import CSV:
--- LOAD DATA INFILE '/path/to/data.csv'
--- INTO TABLE student_info
--- FIELDS TERMINATED BY ','
--- LINES TERMINATED BY '\n'
--- IGNORE 1 ROWS;
 
 CREATE INDEX idx_name ON student_info(name);
 
